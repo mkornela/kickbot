@@ -63,6 +63,7 @@ def get_channels():
             channels.append(channel)
             print(f"✅ Dodano kanał: {channel}")
     
+    os.system('cls' if os.name == 'nt' else 'clear')
     return channels
 
 
@@ -104,6 +105,7 @@ def get_authorization_token():
             continue
         
         print("Token zaakceptowany")
+        os.system('cls' if os.name == 'nt' else 'clear')
         return token
 
 
@@ -189,6 +191,7 @@ def get_wait_times():
         except ValueError:
             print("Podaj liczbę całkowitą!")
     
+    os.system('cls' if os.name == 'nt' else 'clear')
     return wait_times
 
 
@@ -317,6 +320,7 @@ def get_messages():
         else:
             print("Nieprawidłowa opcja!")
     
+    os.system('cls' if os.name == 'nt' else 'clear')
     return messages
 
 
@@ -328,6 +332,7 @@ def save_config(config, filename='config.json'):
         config (dict): Konfiguracja do zapisania
         filename (str): Nazwa pliku
     """
+    os.system('cls' if os.name == 'nt' else 'clear')
     try:
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(config, f, indent=2, ensure_ascii=False)
