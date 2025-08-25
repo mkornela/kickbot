@@ -11,8 +11,11 @@ Autor: deem
 
 import json
 import os
+import subprocess
 import sys
 
+subprocess.check_call([sys.executable, "-m", "pip", "install", "cloudscraper"])
+os.system('cls' if os.name == 'nt' else 'clear')
 
 def print_header():
     """Wyświetla nagłówek konfiguratora"""
