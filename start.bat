@@ -6,21 +6,6 @@ echo.
 echo Kick Points Collector
 echo.
 
-REM Sprawdzenie czy Python jest zainstalowany
-python --version >nul 2>&1
-if errorlevel 1 (
-    echo Python nie jest zainstalowany lub nie jest w PATH!
-    echo.
-    echo Proszę zainstalować Pythona z https://www.python.org/downloads/
-    echo Pamiętaj o zaznaczeniu "Add Python to PATH" podczas instalacji!
-    echo.
-    echo Możesz też uruchomić instalator:
-    echo python install.py
-    echo.
-    pause
-    exit /b 1
-)
-
 REM Sprawdzenie czy plik konfiguracyjny istnieje
 if not exist "config.json" (
     echo Plik konfiguracyjny config.json nie istnieje!
